@@ -1,5 +1,0 @@
-[
-  {"id": "aula_diaria", "descricao": "Completar 1 aula", "recompensa_xp": 20, "recompensa_ouro": 5},
-  {"id": "quiz_diario", "descricao": "Acertar 3 perguntas no quiz", "recompensa_xp": 30, "recompensa_ouro": 10},
-  {"id": "versiculo_diario", "descricao": "Ler um versículo", "recompensa_xp": 50, "recompensa_ouro": 15}
-]
