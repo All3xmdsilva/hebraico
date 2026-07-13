@@ -1,0 +1,62 @@
+HebraicoQuest/
+
+│
+├── index.html
+│
+├── assets/
+│   ├── imagens/
+│   ├── icones/
+│   ├── audio/
+│   ├── videos/
+│   ├── fontes/
+│   └── animacoes/
+│
+├── css/
+│   ├── base.css
+│   ├── layout.css
+│   ├── componentes.css
+│   ├── dashboard.css
+│   ├── curso.css
+│   ├── quiz.css
+│   ├── perfil.css
+│   ├── responsivo.css
+│   └── tema.css
+│
+├── js/
+│   ├── app.js
+│   ├── router.js
+│   ├── storage.js
+│   ├── perfis.js
+│   ├── dashboard.js
+│   ├── curso.js
+│   ├── quiz.js
+│   ├── perfil.js
+│   ├── conquistas.js
+│   ├── missoes.js
+│   ├── notificacoes.js
+│   ├── audio.js
+│   └── utilitarios.js
+│
+├── data/
+│   ├── alfabeto.json
+│   ├── vogais.json
+│   ├── vocabulario.json
+│   ├── gramatica.json
+│   ├── quiz.json
+│   ├── versiculos.json
+│   ├── conquistas.json
+│   └── missoes.json
+│
+├── pages/
+│   ├── dashboard.html
+│   ├── curso.html
+│   ├── quiz.html
+│   ├── perfil.html
+│   ├── conquistas.html
+│   ├── configuracoes.html
+│   ├── loja.html
+│   └── sobre.html
+│
+├── docs/
+│
+└── README.md

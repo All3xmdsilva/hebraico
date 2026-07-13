@@ -1,0 +1,28 @@
+js/
+│
+├── app.js
+│
+├── core/
+│      storage.js
+│
+├── modules/
+│      dashboard.js
+│      curso.js
+│      perfil.js
+│      quiz.js
+│      biblia.js
+│      dicionario.js
+│      conquistas.js
+│
+├── ui/
+│      modal.js
+│      toast.js
+│      progress.js
+│      confirm.js
+│      card.js
+│
+├── audio.js
+├── eventos.js
+├── missoes.js
+├── notificacoes.js
+└── utilitarios.js

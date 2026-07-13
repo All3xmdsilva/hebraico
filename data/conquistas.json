@@ -1,0 +1,9 @@
+[
+  {"id": "primeira_letra", "nome": "Primeira Letra", "descricao": "Aprenda sua primeira letra hebraica.", "icone": "text_fields", "raridade": "comum"},
+  {"id": "primeiro_quiz", "nome": "Primeiro Quiz", "descricao": "Complete seu primeiro quiz.", "icone": "quiz", "raridade": "comum"},
+  {"id": "100_acertos", "nome": "100 Acertos", "descricao": "Acumule 100 acertos em quizzes.", "icone": "check_circle", "raridade": "raro"},
+  {"id": "mestre_alfabeto", "nome": "Mestre do Alfabeto", "descricao": "Conclua todas as lições do Mundo 1.", "icone": "auto_awesome", "raridade": "épico"},
+  {"id": "leitor_iniciante", "nome": "Leitor Iniciante", "descricao": "Leia seu primeiro versículo completo.", "icone": "menu_book", "raridade": "raro"},
+  {"id": "5_licoes", "nome": "Estudioso", "descricao": "Complete 5 lições.", "icone": "book", "raridade": "comum"},
+  {"id": "100_xp", "nome": "Centenário", "descricao": "Acumule 100 XP.", "icone": "trending_up", "raridade": "raro"}
+]
