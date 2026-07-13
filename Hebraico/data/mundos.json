@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "nome": "O Chamado das Letras",
+    "descricao": "Domine as 22 letras do alfabeto hebraico.",
+    "licoes": [
+      {"id": 1, "titulo": "Alef a Guímel", "conteudo": "**Alef (א)** – não possui som próprio, funciona como suporte para vogais.\n**Bet (ב)** – som de 'b' (com daguesh) ou 'v' (sem daguesh).\n**Guímel (ג)** – som de 'g' como em 'gato'.\n\nExemplos:\nאָב (av) – pai\nבַּיִת (báyit) – casa\nגָּדוֹל (gadól) – grande"},
+      {"id": 2, "titulo": "Dálet a Vav", "conteudo": "**Dálet (ד)** – som de 'd'.\n**He (ה)** – som de 'h' aspirado (como 'house' em inglês).\n**Vav (ו)** – som de 'v', e também pode representar vogais 'o' ou 'u'.\n\nExemplos:\nדָּוִד (Davíd) – David\nהַר (har) – montanha\nוָו (vav) – gancho"},
+      {"id": 3, "titulo": "Záin a Iúd", "conteudo": "**Záin (ז)** – som de 'z'.\n**Chet (ח)** – som gutural de 'kh' (como 'Bach').\n**Tet (ט)** – som de 't'.\n**Iúd (י)** – som de 'y', e como vogal 'i'.\n\nExemplos:\nזָהָב (zaháv) – ouro\nחָכָם (chachám) – sábio\nיָד (yad) – mão"},
+      {"id": 4, "titulo": "Caf a Mem", "conteudo": "**Caf (כ/ך)** – 'k' (com daguesh) ou 'kh' (sem). Final: ך.\n**Lámed (ל)** – 'l'.\n**Mem (מ/ם)** – 'm'. Final: ם.\n\nExemplos:\nכֶּלֶב (kélev) – cão\nלֵב (lev) – coração\nמַיִם (máyim) – água"},
+      {"id": 5, "titulo": "Nun a Pê", "conteudo": "**Nun (נ/ן)** – 'n'. Final: ן.\n**Sámek (ס)** – 's'.\n**Áin (ע)** – som gutural (quase mudo).\n**Pê (פ/ף)** – 'p' (com daguesh) ou 'f' (sem). Final: ף.\n\nExemplos:\nנָבִיא (naví) – profeta\nסֵפֶר (séfer) – livro\nפֶּה (pe) – boca"},
+      {"id": 6, "titulo": "Tsadê a Tav", "conteudo": "**Tsadê (צ/ץ)** – 'ts'. Final: ץ.\n**Qof (ק)** – 'k' (mais profundo).\n**Resh (ר)** – 'r' (vibrante).\n**Shin (ש)** – 'sh' ou 's'.\n**Tav (ת)** – 't'.\n\nExemplos:\nצַדִּיק (tsadík) – justo\nקֹדֶשׁ (kódesh) – santo\nרֹאשׁ (rosh) – cabeça\nשָׁלוֹם (shalóm) – paz\nתּוֹרָה (torá) – lei"}
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "O Vale das Vogais",
+    "descricao": "Aprenda os sinais vocálicos (Niqqud).",
+    "licoes": [
+      {"id": 7, "titulo": "Vogais 'A'", "conteudo": "Patách (ַ) – 'a' curto.\nQámets (ָ) – 'a' longo.\n\nExemplo:\nדָּבָר (davár) – palavra\nאַב (av) – pai (com patách implícito)"},
+      {"id": 8, "titulo": "Vogais 'E' e 'I'", "conteudo": "Segól (ֶ) – 'e' curto.\nTsere (ֵ) – 'e' longo.\nChiríq (ִ) – 'i'.\n\nExemplo:\nבֵּן (ben) – filho\nשֵׁם (shem) – nome\nאִם (im) – se"},
+      {"id": 9, "titulo": "Vogais 'O' e 'U'", "conteudo": "Chólem (ֹ) – 'o'.\nQubúts (ֻ) – 'u'.\nShurúq (וּ) – 'u' (vav com ponto).\n\nExemplo:\nטוֹב (tov) – bom\nשׁוּק (shuk) – mercado"}
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "As Trilhas das Sílabas",
+    "descricao": "Formação e leitura de sílabas.",
+    "licoes": [
+      {"id": 10, "titulo": "Sílabas simples (CV)", "conteudo": "Toda sílaba hebraica começa com consoante. Exemplos com diferentes vogais:\nבַּ – ba\nבֶּ – be\nבִּ – bi\nבֹּ – bo\nבּוּ – bu"},
+      {"id": 11, "titulo": "Sílabas complexas e shevá", "conteudo": "Shevá (ְ) pode ser mudo ou sonoro (pronunciado como 'e' rápido).\nExemplos:\nבְּ – be (shevá sonoro) ou ausência de vogal.\nשְׁמוֹ (shemó) – seu nome"}
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "A Cidade das Palavras",
+    "descricao": "Construção de vocabulário básico.",
+    "licoes": [
+      {"id": 12, "titulo": "Saudações e expressões", "conteudo": "שָׁלוֹם (shalóm) – paz / olá\nבֹּקֶר טוֹב (bóker tov) – bom dia\nלַיְלָה טוֹב (láyla tov) – boa noite\nתּוֹדָה (todá) – obrigado\nבְּבַקָּשָׁה (bevakashá) – por favor"},
+      {"id": 13, "titulo": "Família e pessoas", "conteudo": "אָב (av) – pai\nאֵם (em) – mãe\nבֵּן (ben) – filho\nבַּת (bat) – filha\nאָח (ach) – irmão\nאָחוֹת (achót) – irmã"}
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Vocabulário Bíblico",
+    "descricao": "Palavras frequentes na Bíblia.",
+    "licoes": [
+      {"id": 14, "titulo": "Nomes de Deus", "conteudo": "יְהוָה (Adonai) – o Senhor\nאֱלֹהִים (Elohím) – Deus\nאֵל (El) – Deus (poderoso)\nשַׁדַּי (Shadái) – Todo-Poderoso\nצְבָאוֹת (Tseva'ót) – dos Exércitos"},
+      {"id": 15, "titulo": "Termos teológicos", "conteudo": "תּוֹרָה (Torá) – Lei, instrução\nמִצְוָה (mitsvá) – mandamento\nחֶסֶד (chésed) – misericórdia\nאֱמוּנָה (emuná) – fé\nבְּרִית (berít) – aliança"}
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "As Portas da Gramática",
+    "descricao": "Estrutura da língua.",
+    "licoes": [
+      {"id": 16, "titulo": "Artigos e preposições", "conteudo": "Artigo definido: הַ (ha) – o, a.\nEx: הַמֶּלֶךְ (hamélech) – o rei.\nPreposições comuns:\nבְּ (be) – em, com\nלְ (le) – para\nמִן (min) – de\nEx: בַּבַּיִת (babáyit) – na casa"},
+      {"id": 17, "titulo": "Gênero e número", "conteudo": "Masculino singular geralmente sem terminação especial.\nFeminino singular: termina em ָה (á) ou ת (et).\nPlural masculino: ים (ím).\nPlural feminino: וֹת (ót).\nEx: סוּס (sus) – cavalo; סוּסִים (susím) – cavalos; תּוֹרָה (torá) – lei; תּוֹרוֹת (torót) – leis."}
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "O Caminho dos Versículos",
+    "descricao": "Leitura de pequenos trechos.",
+    "licoes": [
+      {"id": 18, "titulo": "Gênesis 1:1", "conteudo": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ\n(Bereshit bará Elohím et hashamáyim ve'et ha'árets)\n\nAnálise palavra por palavra:\nבְּרֵאשִׁית – no princípio\nבָּרָא – criou\nאֱלֹהִים – Deus\nאֵת – (partícula do objeto direto)\nהַשָּׁמַיִם – os céus\nוְאֵת – e (partícula)\nהָאָרֶץ – a terra"},
+      {"id": 19, "titulo": "Salmos 23:1", "conteudo": "יְהוָה רֹעִי לֹא אֶחְסָר\n(Adonái ro'í lo echsár)\n\nO Senhor é o meu pastor; nada me faltará.\n\nרֹעִי – meu pastor (raiz רעה)\nלֹא – não\nאֶחְסָר – faltarei (futuro de חסר)"}
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "A Biblioteca dos Profetas",
+    "descricao": "Textos maiores dos profetas.",
+    "licoes": [
+      {"id": 20, "titulo": "Isaías 40:8", "conteudo": "יָבֵשׁ חָצִיר נָבֵל צִיץ וּדְבַר אֱלֹהֵינוּ יָקוּם לְעוֹלָם\n(Yavésh chatsír navél tsits ud'var Elohênu yakúm le'olám)\n\nSeca-se a erva, murcha a flor, mas a palavra do nosso Deus permanece para sempre."},
+      {"id": 21, "titulo": "Jeremias 29:11", "conteudo": "כִּי אָנֹכִי יָדַעְתִּי אֶת־הַמַּחֲשָׁבֹת אֲשֶׁר אֲנִי חֹשֵׁב עֲלֵיכֶם...\n(Kí anochí yadá'ti et-hamachashavót ashér aní choshév alechém...)\n\nPorque eu bem sei os pensamentos que penso de vós..."}
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Leitura Guiada",
+    "descricao": "Acompanhamento de textos bíblicos.",
+    "licoes": [
+      {"id": 22, "titulo": "Rute 1:16", "conteudo": "וַתֹּאמֶר רוּת אַל־תִּפְגְּעִי־בִי לְעָזְבֵךְ...\n(Vatómer Rut al-tifge'í vi le'azvech...)\n\nDisse Rute: Não me instes para que te deixe..."},
+      {"id": 23, "titulo": "Jonas 1:1", "conteudo": "וַיְהִי דְּבַר־יְהוָה אֶל־יוֹנָה בֶן־אֲמִתַּי לֵאמֹר\n(Vayhí dvar-Adonái el-Yoná ven-Amitái lemor)\n\nE veio a palavra do Senhor a Jonas, filho de Amitai, dizendo..."}
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Leitura da Bíblia Hebraica",
+    "descricao": "Leitura independente de porções completas.",
+    "licoes": [
+      {"id": 24, "titulo": "Gênesis 1 (trecho inicial)", "conteudo": "Leia Gênesis 1:1-5 em hebraico. Tente reconhecer as letras, vogais e vocabulário aprendido.\n\nבְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ. וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ..."}
+    ]
+  }
+]
