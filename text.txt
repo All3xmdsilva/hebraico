@@ -1,28 +1,29 @@
-js/
-│
-├── app.js
-│
-├── core/
-│      storage.js
-│
-├── modules/
-│      dashboard.js
-│      curso.js
-│      perfil.js
-│      quiz.js
-│      biblia.js
-│      dicionario.js
-│      conquistas.js
-│
-├── ui/
-│      modal.js
-│      toast.js
-│      progress.js
-│      confirm.js
-│      card.js
-│
-├── audio.js
-├── eventos.js
-├── missoes.js
-├── notificacoes.js
-└── utilitarios.js
+VM70:1 Uncaught ReferenceError: auth is not defined
+    at <anonymous>:1:1
+(anônimo)	@	VM70:1
+Seria possível dizer que o próprio Firebase não esta respondendo com os dados que forneci.
+
+São estes dados 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBRvCA9M53MBSUwOuzeUX7myrMlevRzotw",
+  authDomain: "hebraico-8d3bf.firebaseapp.com",
+  projectId: "hebraico-8d3bf",
+  storageBucket: "hebraico-8d3bf.firebasestorage.app",
+  messagingSenderId: "207294986594",
+  appId: "1:207294986594:web:48e6123e48873ceba1143b",
+  measurementId: "G-VPE9NKXV5M"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+e acrescentei as linhas que faltaram da que você me mandou e mesmo assim no console apareceu assim

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Gerar Códigos VIP</title></head>
+<body>
+  <h2>Gerar Códigos VIP</h2>
+  <input id="qtd" type="number" min="1" value="5" placeholder="Quantidade">
+  <button onclick="gerar()">Gerar e salvar no Firestore</button>
+  <ul id="lista"></ul>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyBRvCA9M53MBSUwOuzeUX7myrMlevRzotw",
+      authDomain: "hebraico-8d3bf.firebaseapp.com",
+      projectId: "hebraico-8d3bf",
+      storageBucket: "hebraico-8d3bf.appspot.com",
+      messagingSenderId: "207294986594",
+      appId: "1:207294986594:web:48e6123e48873ceba1143b"
+    });
+    const db = firebase.firestore();
+
+    async function gerar() {
+      const qtd = parseInt(document.getElementById('qtd').value) || 1;
+      const lista = document.getElementById('lista');
+      lista.innerHTML = '';
+      for (let i = 0; i < qtd; i++) {
+        const codigo = 'VIP-' + Math.random().toString(36).substring(2, 10).toUpperCase();
+        await db.collection('codigos').doc(codigo).set({
+          ativo: true,
+          usado: false,
+          usadoPor: null,
+          usadoEm: null,
+          criadoEm: new Date().toISOString()
+        });
+        const li = document.createElement('li'); li.textContent = codigo; lista.appendChild(li);
+      }
+      alert(`${qtd} código(s) gerado(s)!`);
+    }
+  </script>
+</body>
+</html>

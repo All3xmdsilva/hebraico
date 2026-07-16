@@ -1,0 +1,10 @@
+{
+  "name": "Hebraico Quest",
+  "short_name": "Hebraico",
+  "description": "Aprenda Hebraico Bíblico como uma grande aventura.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F4F7FB",
+  "theme_color": "#2563EB",
+  "icons": []
+}
