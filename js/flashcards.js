@@ -1,3 +1,5 @@
+window.vip = window.vip || false;
+
 const Flashcards = {
   cartas: [],
   cartasRevisar: [],
@@ -32,14 +34,18 @@ const Flashcards = {
         <h2>Flashcards (Revisão Espaçada)</h2>
         <p>Total de cartas: <strong>${Flashcards.cartas.length}</strong></p>
         <p>Cartas para revisar agora: <strong>${pendentes.length}</strong></p>
-        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">`;
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+    `;
     if (pendentes.length > 0) {
-      html += `<button class="btn-primario" data-action="Flashcards.iniciarRevisao">Iniciar revisão (${pendentes.length})</button>`;
+      html += `<button class="btn-primario" onclick="Flashcards.iniciarRevisao()">Iniciar revisão (${pendentes.length})</button>`;
     } else {
       html += `<p style="color:var(--success)">🎉 Nenhuma carta pendente. Volte mais tarde!</p>`;
     }
-    html += `<button class="btn-secundario" data-action="Flashcards.iniciarTodas">Revisar todas (${Flashcards.cartas.length})</button>`;
-    html += `<button class="btn-perigo" data-action="Flashcards.resetarProgresso">Resetar progresso</button>`;
+    html += `<button class="btn-secundario" onclick="Flashcards.iniciarTodas()">Revisar todas (${Flashcards.cartas.length})</button>`;
+    html += `<button class="btn-perigo" onclick="Flashcards.resetarProgresso()">Resetar progresso</button>`;
+    if (!window.vip) {
+      html += `<p style="margin-top:12px; color:var(--text-secondary);">🌟 VIP libera flashcards completos.</p>`;
+    }
     html += `</div></div>`;
     return html;
   },
@@ -83,14 +89,15 @@ const Flashcards = {
     Flashcards.virado = false;
     const html = `
       <div class="fade-in" style="max-width:400px; margin:0 auto;">
-        <button class="btn-secundario" onclick="Flashcards.voltarPainel()" style="margin-bottom:16px;">← Parar revisão</button>
-        <div class="card" id="flashcard" data-action="Flashcards.virar" style="min-height:200px; display:flex; align-items:center; justify-content:center; cursor:pointer; text-align:center; font-size:2rem; font-family:'Cinzel',serif; user-select:none;">${carta.hebraico}</div>
+        <button class="btn-secundario" onclick="Flashcards.voltarPainel()">← Parar revisão</button>
+        <div class="card" id="flashcard" onclick="Flashcards.virar()" style="min-height:200px; display:flex; align-items:center; justify-content:center; cursor:pointer; text-align:center; font-size:2rem; font-family:'Cinzel',serif; user-select:none;">${carta.hebraico}</div>
         <div style="display:flex; gap:12px; margin-top:16px;">
-          <button class="btn-perigo" data-action="Flashcards.avaliar" data-args='[0]'>Não lembrei</button>
-          <button class="btn-primario" data-action="Flashcards.avaliar" data-args='[1]'>Lembrei</button>
+          <button class="btn-perigo" onclick="Flashcards.avaliar(0)">Não lembrei</button>
+          <button class="btn-primario" onclick="Flashcards.avaliar(1)">Lembrei</button>
         </div>
         <p style="margin-top:8px; color:var(--text-secondary);">${Flashcards.indice+1} de ${Flashcards.cartasRevisar.length}</p>
-      </div>`;
+      </div>
+    `;
     document.getElementById('conteudo').innerHTML = html;
   },
 

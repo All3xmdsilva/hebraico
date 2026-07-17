@@ -89,7 +89,7 @@ const CacaPalavras = {
           <div id="gridCaca" style="display:grid; grid-template-columns:repeat(${CacaPalavras.tamanho},40px); gap:2px;">`;
     for (let i = 0; i < CacaPalavras.tamanho; i++) {
       for (let j = 0; j < CacaPalavras.tamanho; j++) {
-        html += `<div class="celula-caca" data-action="CacaPalavras.clicarCelula" data-args='[${i},${j}]' 
+        html += `<div class="celula-caca" onclick="CacaPalavras.clicarCelula(${i},${j})" 
                  style="width:40px; height:40px; display:flex; align-items:center; justify-content:center; 
                         background:var(--surface); border:1px solid var(--border); border-radius:4px; 
                         cursor:pointer; font-size:1.2rem; user-select:none;">${CacaPalavras.grid[i][j]}</div>`;
@@ -106,7 +106,7 @@ const CacaPalavras = {
   },
 
   clicarCelula(linha, col) {
-    const celula = document.querySelector(`.celula-caca[data-args='[${linha},${col}]']`);
+    const celula = document.querySelector(`.celula-caca[onclick*="CacaPalavras.clicarCelula(${linha},${col})"]`);
     if (!celula || celula.classList.contains('encontrada')) return;
     if (celula.classList.contains('selecionada')) {
       celula.classList.remove('selecionada');
@@ -125,7 +125,7 @@ const CacaPalavras = {
     if (palavraEncontrada && !CacaPalavras.selecionadas.includes(letras)) {
       CacaPalavras.selecionadas.push(letras);
       CacaPalavras.selecaoAtual.forEach(c => {
-        const cel = document.querySelector(`.celula-caca[data-args='[${c.linha},${c.col}]']`);
+        const cel = document.querySelector(`.celula-caca[onclick*="CacaPalavras.clicarCelula(${c.linha},${c.col})"]`);
         if (cel) { cel.classList.add('encontrada'); cel.style.background = 'var(--success)'; cel.style.color = 'white'; }
       });
       document.querySelector(`.palavra-alvo[data-palavra="${letras}"]`).style.textDecoration = 'line-through';

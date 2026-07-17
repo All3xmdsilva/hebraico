@@ -1,3 +1,5 @@
+window.vip = window.vip || false;
+
 const Forca = {
   palavra: {},
   letrasCorretas: [],
@@ -30,8 +32,15 @@ const Forca = {
         <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; justify-content:center;">${Forca.gerarBotoesLetras()}</div>
         <p style="color:var(--danger);">Erros: ${Forca.letrasErradas.length}/${Forca.maxErros}</p>
         <pre>${enforcado}</pre>
-        <button class="btn-secundario" onclick="Router.navegar('forca')">Nova palavra</button>
-      </div>`;
+        <button class="btn-secundario" onclick="Router.navegar('forca')">Nova palavra</button>`;
+if (!window.vip) {
+  html += `<div class="card" style="margin-top:8px; text-align:center;">
+    <span style="font-size:2rem;">🔒</span>
+    <p>Recursos extras liberados apenas para VIP.</p>
+    <button class="btn-primario" onclick="Router.navegar('assinatura')">Seja VIP 🌟</button>
+  </div>`;
+}
+    html += `</div>`;
 
     if (!exibida.includes('_')) {
       setTimeout(() => {
@@ -55,7 +64,7 @@ const Forca = {
     let botoes = '';
     for (const letra of alfabeto) {
       const desabilitada = Forca.letrasCorretas.includes(letra) || Forca.letrasErradas.includes(letra);
-      botoes += `<button class="btn-secundario" style="padding:8px 12px;" ${desabilitada ? 'disabled' : ''} data-action="Forca.tentarLetra" data-args='["${letra}"]'>${letra}</button>`;
+      botoes += `<button class="btn-secundario" style="padding:8px 12px;" ${desabilitada ? 'disabled' : ''} onclick="Forca.tentarLetra('${letra}')">${letra}</button>`;
     }
     return botoes;
   },

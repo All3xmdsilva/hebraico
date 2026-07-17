@@ -11,32 +11,23 @@ const Router = {
         this.navegar(page);
       });
     });
-
-    // Delegação global para data-action
-    document.addEventListener('click', (e) => {
-      const target = e.target.closest('[data-action]');
-      if (!target) return;
-      e.preventDefault();
-      const acao = target.dataset.action;
-      const args = target.dataset.args ? JSON.parse(target.dataset.args) : [];
-      const fn = acao.split('.').reduce((obj, prop) => obj?.[prop], window);
-      if (typeof fn === 'function') {
-        fn(...args);
-      } else {
-        console.warn(`Ação não encontrada: ${acao}`);
+    // Só usamos hashchange para navegação externa (botões do navegador)
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.slice(1) || 'dashboard';
+      if (hash !== this.paginaAtual) {
+        this.rotaHash();
       }
     });
-
-    // Carrega rota inicial
     this.rotaHash();
   },
 
   navegar(page) {
-    this.paginaAtual = page;
-    this.atualizarMenu();
-    this.renderizarPagina(page);
-    // Opcional: atualizar a hash silenciosamente
-    history.replaceState(null, null, `#${page}`);
+    // Se já está na página, força re-renderização imediata
+    if (this.paginaAtual === page) {
+      this.renderizarPagina(page);
+      return;
+    }
+    window.location.hash = page;
   },
 
   rotaHash() {
@@ -62,6 +53,9 @@ const Router = {
       perfil: Perfil.render,
       conquistas: ConquistasPage.render,
       configuracoes: Configuracoes.render,
+      novidades: NovidadesPage.render,
+      assinatura: AssinaturaPage.render,
+      admin: AdminPage.render,
       flashcards: Flashcards.render,
       memoria: Memoria.render,
       'caca-palavras': CacaPalavras.render,
@@ -74,6 +68,17 @@ const Router = {
       try {
         const conteudo = await mapeamento[page]();
         this.conteudo.innerHTML = conteudo;
+
+        // Configurar eventos específicos de cada página
+        if (page === 'perfil' && typeof Perfil.setupEvents === 'function') {
+          Perfil.setupEvents();
+        }
+        if (page === 'admin' && typeof AdminPage.setupEvents === 'function') {
+          AdminPage.setupEvents();
+        }
+        if (page === 'assinatura' && typeof AssinaturaPage.setupEvents === 'function') {
+          AssinaturaPage.setupEvents();
+        }
       } catch (erro) {
         this.conteudo.innerHTML = `<p style="color:var(--danger)">Erro ao carregar a página.</p>`;
         console.error(erro);

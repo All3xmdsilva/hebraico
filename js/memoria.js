@@ -1,3 +1,5 @@
+window.vip = window.vip || false;
+
 const Memoria = {
   cartas: [],
   primeiraCarta: null,
@@ -8,7 +10,9 @@ const Memoria = {
   async render() {
     try {
       const palavras = await DataLoader.carregarJSON('dicionario');
-      const selecionadas = Memoria.embaralhar([...palavras]).slice(0, 6);
+      const vip = window.vip || false;
+      const numPares = vip ? 6 : 3; // 3 pares gratuito
+      const selecionadas = Memoria.embaralhar([...palavras]).slice(0, numPares);
       Memoria.paresEncontrados = 0;
       Memoria.cartas = Memoria.embaralhar([
         ...selecionadas.map(p => ({ tipo: 'hebraico', valor: p.hebraico, id: p.hebraico, significado: p.significado })),
@@ -37,15 +41,22 @@ const Memoria = {
         <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px; max-width:600px;">`;
     Memoria.cartas.forEach((carta, index) => {
       html += `
-        <div class="carta-memoria" data-action="Memoria.virarCarta" data-args='[${index}]' 
+        <div class="carta-memoria" onclick="Memoria.virarCarta(${index})" 
              style="aspect-ratio:1; background:var(--primary); border-radius:var(--radius-btn); display:flex; align-items:center; justify-content:center; cursor:pointer; color:white; font-weight:600; user-select:none; transition:0.2s;">
           ?
         </div>`;
     });
     html += `</div>
-        <p style="margin-top:12px;">Pares encontrados: <span id="contadorPares">0</span>/6</p>
-        <button class="btn-secundario" onclick="Router.navegar('memoria')" style="margin-top:12px;">Reiniciar</button>
-      </div>`;
+        <p style="margin-top:12px;">Pares encontrados: <span id="contadorPares">0</span>/${Memoria.cartas.length/2}</p>
+        <button class="btn-secundario" onclick="Router.navegar('memoria')" style="margin-top:12px;">Reiniciar</button>`;
+    if (!window.vip) {
+        html += `<div class="card" style="margin-top:8px; text-align:center; opacity:0.9;">
+          <span style="font-size:2rem;">🔒</span>
+          <p>Versão gratuita limitada a 3 pares. VIP desbloqueia 6 pares.</p>
+          <button class="btn-primario" onclick="Router.navegar('assinatura')">Seja VIP 🌟</button>
+        </div>`;
+    }
+    html += `</div>`;
     return html;
   },
 
@@ -79,7 +90,7 @@ const Memoria = {
       p2.elemento.style.background = 'var(--success)';
       Memoria.resetarSelecao();
       Memoria.bloqueado = false;
-      if (Memoria.paresEncontrados === 6) {
+      if (Memoria.paresEncontrados === Memoria.cartas.length/2) {
         Storage.getPerfil().xp += 30;
         Storage.salvarPerfil(Storage.getPerfil());
         Storage.addOuro(10);

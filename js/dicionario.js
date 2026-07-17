@@ -9,7 +9,7 @@ const DicionarioPage = {
           <div style="margin-bottom:16px; max-width:400px;">
             <input type="text" id="buscaDicionario" placeholder="Buscar palavra (hebraico ou significado)" 
                    style="width:100%; padding:10px; border:1px solid var(--border); border-radius: var(--radius-btn); font-family:inherit;"
-                   data-action="DicionarioPage.filtrar" data-args='[]' oninput="DicionarioPage.filtrar()">
+                   oninput="DicionarioPage.filtrar()">
           </div>
           <div id="resultadosDicionario"></div>
         </div>`;

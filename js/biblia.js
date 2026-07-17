@@ -10,7 +10,7 @@ const BibliaPage = {
           <div style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">`;
       versiculos.forEach((v, i) => {
         html += `
-          <div class="card" style="cursor:pointer;" data-action="BibliaPage.mostrarVersiculo" data-args='[${i}]'>
+          <div class="card" style="cursor:pointer;" onclick="BibliaPage.mostrarVersiculo(${i})">
             <strong>${v.referencia}</strong>
             <p style="direction:rtl; text-align:right; font-family:'Cinzel',serif; font-size:1.2rem; margin-top:8px;">${v.hebraico}</p>
             <p style="color:var(--text-secondary); margin-top:4px;">${v.traducao}</p>
